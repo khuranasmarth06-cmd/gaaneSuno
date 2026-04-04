@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist Selector</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playlist Selector</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <i class="fa-solid fa-house"></i>
-    <div class="select">
-        <h1 id="selectplay">Select WHICH PLAYLIST YOU WANT TO ACCESS...</h1>
+<i class="fa-solid fa-house"></i>
+<div class="select">
+    <h1>Select WHICH PLAYLIST YOU WANT TO ACCESS...</h1>
+</div>
+<div class="button-container">
+    <div class="card">
+        <button onclick="openPlaylist('honeysingh')">
+            <img src="Yo-Yo-Honey-Singh-34.jpeg">
+        </button>
+        <h2>Honey Singh</h2>
     </div>
-    <div class="button-container">
-        <div class="card">
-            <button class="honeysingh">
-                <img src="Yo-Yo-Honey-Singh-34.jpeg" alt="honeysingh">
-            </button>
-            <h2>Honey Singh</h2>
-        </div>
-        <div class="card">
-            <button class="dhurander">
-                <img src="Dhurandhar-main-2-322x322.webp" alt="dhurander">
-            </button>
-            <h2>Dhurander</h2>
-        </div>
+    <div class="card">
+        <button onclick="openPlaylist('dhurander')">
+            <img src="Dhurandhar-main-2-322x322.webp">
+        </button>
+        <h2>Dhurander</h2>
     </div>
-    <div id="songsBox"></div>
-    <div class="icon">
-        <i class="fa-solid fa-backward"></i>
-        <i class="fa-solid fa-play"></i>
-        <i class="fa-solid fa-forward"></i>
-        <input type="range" id="progressBar" value="0" min="0" max="100">
+    <div class="card">
+        <button onclick="openPlaylist('diljit')">
+            <img src="diljeetdhosajh.avif">
+        </button>
+        <h2>Diljit Dosanjh</h2>
     </div>
-    <script src="script2.js"></script>
+    <div class="card">
+        <button onclick="openPlaylist('dhurander2')">
+            <img src="dhurander2.webp" alt="dhurander2">
+        </button>
+        <h2>Dhurander-The Revenge</h2>
+    </div>
+</div>
+<script src="script2.js"></script>
 </body>
 </html>

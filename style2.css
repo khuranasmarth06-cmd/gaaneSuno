@@ -5,116 +5,94 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 body {
+    min-height: 100vh;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #eaeaff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    gap: 20px;
 }
 .select h1 {
-    margin: 40px 0;
-    font-size: 28px;
+    margin: 30px 0;
+    font-size: 26px;
     text-align: center;
     color: #c9a9ff;
 }
 .button-container {
     display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 20px;
+    overflow-x: auto;
+    width: 95%;
+    padding-bottom: 10px;
+}
+.button-container::-webkit-scrollbar {
+    height: 6px;
+}
+.button-container::-webkit-scrollbar-thumb {
+    background: #7f5cff;
+    border-radius: 10px;
 }
 .card {
+    min-width: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 button {
+    width: 100%;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(200, 150, 255, 0.25);
-    border-radius: 25px;
-    padding: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(120, 80, 255, 0.25);
-}
-button:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 35px rgba(140, 100, 255, 0.7);
-}
-button img {
-    width: 180px;
-    height: 180px;
     border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 0 15px rgba(120, 80, 255, .25);
+}
+
+button:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 25px rgba(140, 100, 255, .7);
+}
+
+button img {
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
     object-fit: cover;
 }
+
 .card h2 {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 8px;
+    font-size: 16px;
     color: #c9a9ff;
 }
-#songsBox {
-    margin-top: 40px;
-    width: 80%;
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 25px rgba(120, 80, 255, 0.4);
-    backdrop-filter: blur(12px);
-    text-align: center;
-}
-#songsBox ul {
-    list-style: none;
-}
-#songsBox li {
-    padding: 10px;
-    margin: 8px 0;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
-    transition: 0.3s;
-}
-#songsBox li:hover {
-    background: linear-gradient(90deg, #7f5cff, #9f7bff);
-    transform: scale(1.05);
-}
-.icon {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.icon i {
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.icon i:hover {
-    color: #c9a9ff;
-    transform: scale(1.2);
-}
-#progressBar {
-    width: 200px;
-}
+
 .fa-house {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
 }
+
 .fa-house:hover {
     color: #f8ff3c;
     transform: scale(1.1);
 }
-@media (max-width: 768px) {
+
+@media(max-width:768px) {
     button img {
-        width: 140px;
-        height: 140px;
+        height: 130px;
     }
+
     .select h1 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .card {
+        min-width: 150px;
     }
 }

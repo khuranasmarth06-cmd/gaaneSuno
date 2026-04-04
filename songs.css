@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #eaeaff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 26px;
+    color: #c9a9ff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#songsBox {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(120, 80, 255, 0.4);
+}
+
+#songsBox ul {
+    list-style: none;
+}
+
+#songsBox li {
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+
+#songsBox li:hover {
+    background: linear-gradient(90deg, #7f5cff, #9f7bff);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(140, 100, 255, .6);
+}
+
+.icon {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(120, 80, 255, 0.4);
+}
+
+.icon i {
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icon i:hover {
+    color: #c9a9ff;
+    transform: scale(1.2);
+}
+
+#progressBar {
+    width: 200px;
+    cursor: pointer;
+    accent-color: #7f5cff;
+}
+
+.fa-house {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.fa-house:hover {
+    color: #f8ff3c;
+    transform: scale(1.1);
+}
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #songsBox {
+        width: 95%;
+    }
+
+    #progressBar {
+        width: 120px;
+    }
+
+    .icon {
+        gap: 15px;
+        padding: 10px 15px;
+    }
+}
